@@ -1,8 +1,8 @@
 #include <stdio.h>
-/*
- * Main
+/**
+ * main - print a text
  *
- * Return zero
+ * Return: Zero
  */
 int main(void)
 {
