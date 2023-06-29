@@ -11,10 +11,11 @@ char *cap_string(char *s)
 	char separators[13] = {'\n', '\t', ' ', '.', ',', ';', ',', '!', '?',
 			       '(', ')', '{', '}'};
 
+	if (s[i] >= 'a' && s[i] <= 'z')
+		s[i] -= 32;
+	i++;
 	while (s[i] != '\0')
 	{
-		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
-			s[i] -= 32;
 		for (j = 0; j < 13; j++)
 		{
 			if (s[i - 1] == separators[j] && s[i] >= 'a' && s[i] <= 'z')
